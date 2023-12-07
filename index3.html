@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        ● დაწერე პროგრამა, სადაც ორი a და b
+        მომხმარებლები აგორებენ კამათელს მანამ,
+        სანამ არ გაგორდება, რომელიც უფრო
+        ნაკლებ ცდაში გააგორებს სამიანს ის არის
+        გამარჯვებული
+    </p>
+
+    <script>
+        let a_count = 0
+        let b_count = 0
+
+        while(true){
+            let a = Math.floor((Math.random() * 6) +1)
+            if (a === 3) {
+                break
+            }else{
+                a_count++
+            }
+        }
+
+        while(true){
+            let b = Math.floor((Math.random() * 6) +1)
+            if (b === 3) {
+                break
+            }else{
+                b_count++
+            }
+        }
+
+        if (a_count < b_count){
+            console.log(`The winner of the game is user A in ${a_count} trials`);
+        }else if (b_count < a_count){
+            console.log(`The winner of the game is user B in ${b_count} trials`);
+        }else {
+            console.log("It's a draw");
+        }
+        </script>
+    </body>
+</html>

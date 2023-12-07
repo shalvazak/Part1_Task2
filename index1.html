@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        ● მოცემულია მასივი [{name: 'Temo', age: 25},
+        {name: 'Lasha', age: 21}, {name: 'Ana', age: 28}]
+    </p>
+    <p>
+        ● დაწერე ფუნქცია, რომელიც პარამეტრად
+        მიიღებს user - ების მასივს და დააბრუნებს
+        ყველაზე პატარა ასაკის მქონე ადამიანის
+        სახელს
+    </p>
+
+    <script>
+        const arrUsers = [
+            {
+                name: 'Temo',
+                age: 25
+            }, {
+                name: 'Lasha',
+                age: 21
+            }, {
+                name: 'Ana',
+                age: 28
+            }
+        ];
+
+        function myFunc(arr) {
+            let y = arr[0];
+            for (let i = 1; i < arr.length; i++){
+                if (arr[i].age < y.age){
+                    y = arr[i];
+                }
+            }
+
+            console.log(y.name);
+            
+        }
+
+        myFunc(arrUsers)
+
+    </script>
+</body>
+</html>
